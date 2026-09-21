@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ChefHat, LogOut } from "lucide-react";
 
 import AuthForm from "./components/AuthForm";
-import Home from "./components/Home";
+import Home from "./components/home";
 import RecipeGenerator from "./components/RecipeGenerator";
 import RecipeList from "./components/RecipeList";
 import DashboardTabs from "./components/DashboardTabs";
