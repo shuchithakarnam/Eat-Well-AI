@@ -1,7 +1,7 @@
 import React from 'react';
 import { Clock, Users, Trash2 } from 'lucide-react';
 import type { Recipe } from '../types';
-import useRecipeStore from '../store/recipeStore';
+import useRecipeStore from '../stores/recipeStore';
 
 interface RecipeCardProps {
   recipe: Recipe;
