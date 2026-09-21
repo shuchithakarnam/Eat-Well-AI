@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PieChart, Plus, Trash2 } from 'lucide-react';
-import useAuthStore from '../store/authStore';
+import useAuthStore from '../stores/authStore';
 
 interface MealEntry {
   id: string;
