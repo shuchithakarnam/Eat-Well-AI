@@ -15,17 +15,13 @@ import {
   Sparkles,
 } from "lucide-react";
 
-export default function App() {
+interface HomeProps {
+  onGetStarted: () => void;
+}
+
+export default function Home({ onGetStarted }: HomeProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const features = [
     {
@@ -102,6 +98,16 @@ export default function App() {
     },
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTestimonial(
+        (prev) => (prev + 1) % testimonials.length
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#fff8fb] text-[#563344]">
 
@@ -123,6 +129,7 @@ export default function App() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
+
               <a
                 href="#home"
                 className="text-[#d6537c] font-semibold hover:text-[#bd4168] transition-colors"
@@ -157,6 +164,7 @@ export default function App() {
               >
                 Contact Us
               </a>
+
             </div>
 
             {/* Mobile menu button */}
@@ -167,6 +175,7 @@ export default function App() {
             >
               {isMenuOpen ? <X /> : <Menu />}
             </button>
+
           </div>
         </div>
 
@@ -242,15 +251,11 @@ export default function App() {
               </div>
 
               <h1 className="text-5xl md:text-6xl font-bold text-[#563344] leading-tight">
-
                 Revolutionize Your{" "}
-
                 <span className="text-[#d6537c] italic">
                   Nutrition
                 </span>{" "}
-
                 with AI
-
               </h1>
 
               <p className="text-lg md:text-xl text-[#765566] max-w-xl leading-relaxed">
@@ -258,7 +263,9 @@ export default function App() {
                 meal plans tailored to your goals.
               </p>
 
+              {/* GET STARTED BUTTON */}
               <button
+                onClick={onGetStarted}
                 className="
                   bg-[#d6537c]
                   text-white
