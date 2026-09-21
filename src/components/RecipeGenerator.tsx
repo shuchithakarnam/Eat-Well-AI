@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Plus, Loader2, Trash2 } from "lucide-react";
-import useRecipeStore from "../store/recipeStore";
-import useAuthStore from "../store/authStore";
+import useRecipeStore from "../stores/recipeStore";
+import useAuthStore from "../stores/authStore";
 
 export default function RecipeGenerator() {
   const [ingredients, setIngredients] = useState<string[]>([]);
