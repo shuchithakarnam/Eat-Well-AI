@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Settings, Save } from 'lucide-react';
-import useAuthStore from '../store/authStore';
+import useAuthStore from '../stores/authStore';
 
 export default function UserPreferences() {
   const { user, updatePreferences } = useAuthStore();
