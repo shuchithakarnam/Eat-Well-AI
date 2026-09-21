@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { User, Mail, Lock } from "lucide-react";
-import useAuthStore from "../store/authStore";
+import useAuthStore from "../stores/authStore";
 
 export default function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);
