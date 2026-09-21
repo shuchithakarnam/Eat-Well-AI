@@ -1,6 +1,6 @@
 import React from 'react';
 import { Utensils } from 'lucide-react';
-import useAuthStore from '../store/authStore';
+import useAuthStore from '../stores/authStore';
 
 const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
