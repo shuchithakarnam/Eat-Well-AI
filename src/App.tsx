@@ -4,7 +4,7 @@ import AuthForm from "./components/AuthForm";
 import RecipeGenerator from "./components/RecipeGenerator";
 import RecipeList from "./components/RecipeList";
 import DashboardTabs from "./components/DashboardTabs";
-import useAuthStore from "./store/authStore";
+import useAuthStore from "./stores/authStore";
 import Home from "./components/home";
 export default function App() {
   const { isAuthenticated, user, logout } = useAuthStore();
